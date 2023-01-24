@@ -1,4 +1,3 @@
-# symfony folder mapped to Docker Container
-# This content will visible in the Container after mounting as an docker volume
+# HYP3 Symfony Assignment
 
-Add your Symfony code here
+Author: Sebastian Zauner, S2110238081
