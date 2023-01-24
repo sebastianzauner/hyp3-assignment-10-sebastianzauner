@@ -1,0 +1,40 @@
+{# templates/admin/orders.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Manage Orders{% endblock %}
+
+{% block body %}
+    <h1>Manage Orders</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Telephone</th>
+            <th>Email</th>
+            <th>Size</th>
+            <th>Ingredients</th>
+            <th>Delivery</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.name }}</td>
+                <td>{{ order.address }}</td>
+                <td>{{ order.telephone }}</td>
+                <td>{{ order.email }}</td>
+                <td>{{ order.size }}</td>
+                <td>{{ order.ingredients|join(', ') }}</td>
+                <td>{{ order.delivery }}</td>
+                <td>
+                    <a href="{{ path('admin_order_edit', {'id': order.id}) }}">Edit</a>
+                    <a href="{{ path('admin_order_delete', {'id': order.id}) }}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

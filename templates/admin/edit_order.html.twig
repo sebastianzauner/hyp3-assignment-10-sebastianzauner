@@ -1,0 +1,19 @@
+{# templates/admin/edit_order.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Order{% endblock %}
+
+{% block body %}
+    <h1>Edit Order</h1>
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.address) }}
+    {{ form_row(form.telephone) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.size) }}
+    {{ form_row(form.ingredients) }}
+    {{ form_row(form.delivery) }}
+    {{ form_row(form.save) }}
+    {{ form_end(form) }}
+{% endblock %}
